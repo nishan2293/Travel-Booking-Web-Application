@@ -1,0 +1,126 @@
+<!-- 
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cart</title>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+  <header>
+    <h1>Flight Booking</h1>
+    <nav>
+        <ul>
+          <li><a href="flights.html">Flights</a></li>
+          <li><a href="hotels.html">Hotels</a></li>
+          <li><a href="rentalcarsbook.html">Rental Cars</a></li>
+          <li><a href="orderstatus.html">Order Status</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="specialoffer.html">Special Offer</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <section class="main-content">
+    <h2>Your Cart:</h2>
+    <div id="cart"></div>
+  </section>
+
+  <footer>
+    Nishan Singh Dhillon <br>
+    nsd160330 <br>
+    cs 6314 <br>
+    <p>&copy; 2023 Flight Booking. All rights reserved.</p>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    var flightDetails = JSON.parse(localStorage.getItem('flightDetails'));
+    var hotelDetails = JSON.parse(localStorage.getItem('hotelDetails'));
+
+    if(flightDetails) {
+      var flightInfo = '<h3>Flight Details:</h3>';
+      flightInfo += Object.entries(flightDetails).map(([key, value]) => key.charAt(0).toUpperCase() + key.slice(1) + ': ' + value).join(', ');
+      $("#cart").append('<p>' + flightInfo + '</p>');
+    }
+
+    if(hotelDetails) {
+      var hotelInfo = '<h3>Hotel Details:</h3>';
+      hotelInfo += Object.entries(hotelDetails).map(([key, value]) => key.charAt(0).toUpperCase() + key.slice(1) + ': ' + value).join(', ');
+      $("#cart").append('<p>' + hotelInfo + '</p>');
+    }
+  });
+  </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cart</title>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+  <header>
+    <h1>Flight Booking</h1>
+    <nav>
+        <ul>
+          <li><a href="flights.html">Flights</a></li>
+          <li><a href="hotels.html">Hotels</a></li>
+          <li><a href="rentalcarsbook.html">Rental Cars</a></li>
+          <li><a href="orderstatus.html">Order Status</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="specialoffer.html">Special Offer</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <section class="main-content">
+    <h2>Your Cart:</h2>
+    <div id="cart"></div>
+  </section>
+
+  <footer>
+    Nishan Singh Dhillon <br>
+    nsd160330 <br>
+    cs 6314 <br>
+    <p>&copy; 2023 Flight Booking. All rights reserved.</p>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      var flightDetails = JSON.parse(localStorage.getItem('flightDetails'));
+      var hotelDetails = JSON.parse(localStorage.getItem('hotelDetails'));
+      var carDetails = JSON.parse(localStorage.getItem('carDetails'));
+  
+      if(flightDetails) {
+        var flightInfo = '<h3>Flight Details:</h3>';
+        flightInfo += Object.entries(flightDetails).map(([key, value]) => key.charAt(0).toUpperCase() + key.slice(1) + ': ' + value).join(', ');
+        $("#cart").append('<p>' + flightInfo + '</p>');
+      }
+  
+      if(hotelDetails) {
+        var hotelInfo = '<h3>Hotel Details:</h3>';
+        hotelInfo += Object.entries(hotelDetails).map(([key, value]) => key.charAt(0).toUpperCase() + key.slice(1) + ': ' + value).join(', ');
+        $("#cart").append('<p>' + hotelInfo + '</p>');
+      }
+  
+      if(carDetails) {
+        var carInfo = '<h3>Rental Car Details:</h3>';
+        carInfo += Object.entries(carDetails).map(([key, value]) => {
+          if(key === 'car') {
+            return 'Car: ' + value.name + ', ' + value.description + ', ' + value.price;
+          } else {
+            return key.charAt(0).toUpperCase() + key.slice(1) + ': ' + value;
+          }
+        }).join(', ');
+        $("#cart").append('<p>' + carInfo + '</p>');
+      }
+    });
+  </script>
+  
+</body>
+</html>

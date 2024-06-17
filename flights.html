@@ -1,0 +1,95 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flights</title>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+
+  <header>
+    <h1>Flight Booking</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="flights.html">Flights</a></li>
+      <li><a href="hotels.html">Hotels</a></li>
+      <li><a href="rentalcarsbook.html">Rental Cars</a></li>
+      <li><a href="orderstatus.html">Order Status</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="specialoffer.html">Special Offer</a></li>
+      <li><a href="register.html">Registration</a></li>
+
+
+    </ul>
+  </nav>
+
+  <section class="main-content">
+    <h3>Book a Flight</h3>
+    <div id="displayTable"></div>
+    <form id="flightForm" onsubmit="return validateFlightForm()">
+      <input type="radio" id="oneWay" name="tripType" value="One Way" onclick="toggleReturnDate(false)" checked> One Way
+      <input type="radio" id="roundTrip" name="tripType" value="Round Trip" onclick="toggleReturnDate(true)"> Round Trip<br>
+
+      <label for="origin">Origin:</label>
+      <input type="text" id="origin" name="origin" required><br>
+
+      <label for="destination">Destination:</label>
+      <input type="text" id="destination" name="destination" required><br>
+
+      <label for="departure">Departure Date:</label>
+      <input type="date" id="departure" name="departure" required><br>
+
+      <div id="returnDiv" style="display: none;">
+        <label for="return">Return Date:</label>
+        <input type="date" id="return" name="return"><br>
+      </div>
+
+      <label for="passengerIcon"><img src="passenger_icon.png" alt="Passenger Icon" id="passengerIcon" class="small-icon" onclick="togglePassengerForm()"></label><br>
+      <div id="passengerForm" style="display: none;">
+        <label for="adults">Adults:</label>
+        <input type="number" id="adults" name="adults" min="1" max="10"><br>
+
+        <label for="children">Children:</label>
+        <input type="number" id="children" name="children" min="0" max="10"><br>
+
+        <label for="infants">Infants:</label>
+        <input type="number" id="infants" name="infants" min="0" max="10"><br>
+      </div>
+
+      <input type="submit" value="Search">
+    </form>
+    <div id="flightResults"></div>
+  </section>
+
+  
+  <div id="flightResults" class="main-content"></div>
+  
+  <footer>
+    Nishan Singh Dhillon <br>
+    nsd160330 <br>
+    cs 6314 <br>
+    <p>&copy; 2023 Flight Booking. All rights reserved.</p>
+  </footer>
+
+  <div class="datetime" id="date_time"></div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="flights.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("nav ul").append('<li><a href="cart.html"><img src="cart_icon.png" alt="Cart" class="cart-icon"></a></li>');
+    });
+    </script>
+  <script src="file.js"></script>
+  <script src="flightValidator.js"></script>
+  <script src="loadFlights.js"></script>
+
+</body>
+</html>
+
+
+
+

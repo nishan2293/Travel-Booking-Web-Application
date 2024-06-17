@@ -1,0 +1,147 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Rental Cars</title>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+  
+</head>
+<body>
+  <header>
+    <h1>Rental Car Booking</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="flights.html">Flights</a></li>
+      <li><a href="hotels.html">Hotels</a></li>
+      <li><a href="rentalcarsbook.html">Rental Cars</a></li>
+      <li><a href="orderstatus.html">Order Status</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="specialoffer.html">Special Offer</a></li>
+    </ul>
+  </nav>
+
+  <section class="main-content">
+    <h3>Book a Rental Car</h3>
+    <form id="bookingForm">
+      <label for="pickup">Pickup Location:</label>
+      <input type="text" id="pickup" name="pickup" required><br>
+
+      <label for="return">Return Location:</label>
+      <input type="text" id="return" name="return" required><br>
+
+      <label for="pickup-date">Pickup Date:</label>
+      <input type="date" id="pickup-date" name="pickup-date" required><br>
+
+      <label for="return-date">Return Date:</label>
+      <input type="date" id="return-date" name="return-date" required><br>
+
+      <input type="button" id="searchButton" value="Search">
+    </form>
+
+    <!-- Car Selection Form (Initially Hidden) -->
+    <!-- <div id="carSelection" style="display: none;">
+      <h3>Select a Rental Car</h3>
+      <form>
+        <label for="car">Choose a car:</label>
+        <select id="car" name="car">
+          <option value="car1">Car 1</option>
+          <option value="car2">Car 2</option>
+          <option value="car3">Car 3</option>
+        </select>
+        <input type="submit" value="Book Car">
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    Nishan Singh Dhillon <br>
+    nsd160330 <br>
+    cs 6314 <br>
+    <p>&copy; 2023 Rental Car Booking. All rights reserved.</p>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="rental.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("nav ul").append('<li><a href="cart.html"><img src="cart_icon.png" alt="Cart" class="cart-icon"></a></li>');
+    });
+    </script>
+</body>
+</html> -->
+ 
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rental Cars</title>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+  <header>
+    <h1>Rental Car Booking</h1>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="flights.html">Flights</a></li>
+      <li><a href="hotels.html">Hotels</a></li>
+      <li><a href="rentalcarsbook.html">Rental Cars</a></li>
+      <li><a href="orderstatus.html">Order Status</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="specialoffer.html">Special Offer</a></li>
+      <li><a href="register.html">Registration</a></li>
+    </ul>
+  </nav>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <div id="displayTable"></div>
+  <section class="main-content">
+    <h3>Book a Rental Car</h3>
+    <form id="bookingForm">
+      <label for="pickup">Pickup Location:</label>
+      <input type="text" id="pickup" name="pickup" required><br>
+
+      <label for="return">Return Location:</label>
+      <input type="text" id="return" name="return" required><br>
+
+      <label for="pickup-date">Pickup Date:</label>
+      <input type="date" id="pickup-date" name="pickup-date" required><br>
+
+      <label for="return-date">Return Date:</label>
+      <input type="date" id="return-date" name="return-date" required><br>
+
+      <input type="button" id="searchButton" value="Search">
+    </form>
+
+    <!-- Car Selection Form (Initially Hidden) -->
+    <div id="carSelection" style="display: none;">
+      <h3>Select a Rental Car</h3>
+      <form>
+        <label for="car">Choose a car:</label>
+        <select id="car" name="car">
+          <option value="car1">Car 1 - Compact Car</option>
+          <option value="car2">Car 2 - Midsize Car</option>
+          <option value="car3">Car 3 - Luxury Sedan</option>
+        </select>
+        <input type="submit" value="Book Car">
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    Nishan Singh Dhillon <br>
+    nsd160330 <br>
+    cs 6314 <br>
+    <p>&copy; 2023 Rental Car Booking. All rights reserved.</p>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="rental.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("nav ul").append('<li><a href="cart.html"><img src="cart_icon.png" alt="Cart" class="cart-icon"></a></li>');
+    });
+  </script>
+</body>
+</html>
+
+

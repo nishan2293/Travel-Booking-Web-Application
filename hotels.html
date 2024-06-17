@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hotels</title>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+  <header>
+    <h1>Hotel Booking</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="flights.html">Flights</a></li>
+      <li><a href="hotels.html">Hotels</a></li>
+      <li><a href="rentalcarsbook.html">Rental Cars</a></li>
+      <li><a href="orderstatus.html">Order Status</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="specialoffer.html">Special Offer</a></li>
+      <li><a href="register.html">Registration</a></li>
+      
+    </ul>
+  </nav>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <section class="main-content">
+    <h3>Book a Hotel</h3>
+    <div id="displayTable"></div>
+    <form id="hotelForm">
+      <label for="destination">Destination:</label>
+      <input type="text" id="destination" name="destination" required><br>
+
+      <label for="checkin">Check-in Date:</label>
+      <input type="date" id="checkin" name="checkin" required><br>
+
+      <label for="checkout">Check-out Date:</label>
+      <input type="date" id="checkout" name="checkout" required><br>
+
+      <button id="searchButton">Search</button>
+    </form>
+
+    <form id="hotelSelectForm" style="display: none;">
+      <label for="hotel">Choose a hotel:</label>
+      <select id="hotel" name="hotel">
+        <option value="hotel1">Hotel 1</option>
+        <option value="hotel2">Hotel 2</option>
+       
+        
+   </select>
+      <div id="hotelResults"></div>
+      <br>
+      <input type="submit" value="Book Hotel">
+    </form>
+  </section>
+
+  <footer>
+    Nishan Singh Dhillon <br>
+    nsd160330 <br>
+    cs 6314 <br>
+    <p>&copy; 2023 Hotel Booking. All rights reserved.</p>
+  </footer>
+
+  <script src="validate.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("nav ul").append('<li><a href="cart.html"><img src="cart_icon.png" alt="Cart" class="cart-icon"></a></li>');
+    });
+    </script>
+</body>
+</html>
+
+
+ 

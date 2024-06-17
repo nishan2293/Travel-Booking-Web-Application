@@ -1,0 +1,160 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-image: url("image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.97;
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+
+/* Navigation Styles */
+nav {
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px;
+}
+
+/* Main Content Styles */
+.main-content {
+  margin: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+form label {
+  margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 25%;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.datetime {
+  font-size: 2em; /* This will make the text twice the normal size */
+  color: black; /* Set the color of the text */
+  font-weight: bold; /* Make the text bold */
+  background-color: #f8f8f8; /* Set the background color of the text */
+  padding: 10px; /* Add some padding around the text */
+}
+
+.passengerIcon img {
+  width: 1px;
+  height: 1px;
+}
+
+.small-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.dummy-data {
+  color: red;
+  font-style: italic;
+}
+
+
+/*  */
+
+
+table {
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.choose-flight-btn {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#contactPageContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#jsonOutputWrapper {
+  width: 40%;
+  border: 1px solid #ccc;
+  padding: 15px;
+  height: fit-content;
+  overflow-y: auto;
+  margin-left: 20px;
+}
+
+#jsonOutput {
+  white-space: pre-wrap; 
+  word-wrap: break-word; 
+}
+
+.cart-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.cart-icon {
+  width: 20px;  /* Adjust the size of the icon as needed */
+  height: 20px;
+}
+
